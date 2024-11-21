@@ -25,7 +25,7 @@ resource "aws_s3_bucket_acl" "acl" {
   ]
 
   bucket = aws_s3_bucket.html.id
-  acl    = "public-read"
+  acl    = "private"
 }
 
 resource "aws_s3_bucket_cors_configuration" "cors" {

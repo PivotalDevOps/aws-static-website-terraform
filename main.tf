@@ -1,4 +1,4 @@
 module "deployment" {
-  source = "./deployment"
+  source = "./modules/deployment"
   domain = "${var.domain}"
 }

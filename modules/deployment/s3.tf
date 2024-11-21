@@ -61,7 +61,7 @@ resource "aws_s3_bucket_website_configuration" "configuration" {
 
 resource "aws_s3_bucket_policy" "policy" {
   bucket = aws_s3_bucket.html.id
-  policy = templatefile("./deployment/s3-policy.json", { bucket = "${var.domain}" })
+  policy = templatefile("./modules/deployment/s3-policy.json", { bucket = "${var.domain}" })
 
   depends_on = [aws_s3_bucket_ownership_controls.ownershiop, aws_s3_bucket.html, aws_s3_bucket_acl.acl]
 }

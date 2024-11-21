@@ -1,4 +1,4 @@
-# Installation
+# Info
 
 The Terraform template completes the following tasksj
 * Creates Route53 hosted zone
@@ -7,7 +7,10 @@ The Terraform template completes the following tasksj
 * Creates S3 bucket
 * Uploads ./html/index.html to the S3 bucket
 
-## Deploy static site
+
+# Deploy static site
+
+* Put you web content in `html` folder
 
 ```bash
 DOMAIN_NAME=example.com
@@ -15,7 +18,7 @@ DOMAIN_NAME=example.com
 terraform apply -var domain="${DOMAIN_NAME}"
 ```
 
-## Undeploy static site
+# Undeploy static site
 
 ```bash
 DOMAIN_NAME=example.com
